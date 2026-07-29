@@ -1,0 +1,18 @@
+{
+  "idf.extensionActivationMode": "always",
+  "idf.espIdfPath": "C:/Espressif/frameworks/esp-idf-v5.0.7",
+  "idf.toolsPath": "C:/Espressif",
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32s3"
+  },
+  "clangd.path": "C:\\Espressif\\tools\\esp-clang\\esp-20.1.1_20250829\\esp-clang\\bin\\clangd.exe",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=**",
+    "--compile-commands-dir=c:\\Users\\efree\\Downloads\\Co-Create_ESP-FLY-main_Initial\\Co-Create_ESP-FLY-main\\Firmware\\esp-drone\\build"
+  ],
+  "idf.currentSetup": "C:/Espressif/frameworks/esp-idf-v5.0.7/",
+  "idf.portWin": "COM9",
+  "idf.flashType": "UART",
+  "python-envs.defaultEnvManager": "ms-python.python:system"
+}

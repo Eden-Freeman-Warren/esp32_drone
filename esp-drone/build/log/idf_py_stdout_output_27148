@@ -1,0 +1,102 @@
+[1/27] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\efree\Downloads\Co-Create_ESP-FLY-main_Initial\Co-Create_ESP-FLY-main\Firmware\esp-drone\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.0_py3.14_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.0.7/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/efree/Downloads/Co-Create_ESP-FLY-main_Initial/Co-Create_ESP-FLY-main/Firmware/esp-drone/build/bootloader/bootloader.bin"
+Bootloader binary size 0x55b0 bytes. 0x2a50 bytes (33%) free.
+[2/27] No install step for 'bootloader'
+[3/27] Completed 'bootloader'
+[4/27] Building C object esp-idf/crazyflie/CMakeFiles/__idf_crazyflie.dir/modules/src/crtp_localization_service.c.obj
+[5/27] Linking C static library esp-idf\crazyflie\libcrazyflie.a
+[6/27] Linking C static library esp-idf\adc\libadc.a
+[7/27] Linking C static library esp-idf\wifi\libwifi.a
+[8/27] Linking C static library esp-idf\eeprom\libeeprom.a
+[9/27] Linking C static library esp-idf\led\libled.a
+[10/27] Linking C static library esp-idf\vl53l0\libvl53l0.a
+[11/27] Linking C static library esp-idf\vl53l1\libvl53l1.a
+[12/27] Linking C static library esp-idf\pmw3901\libpmw3901.a
+[13/27] Linking C static library esp-idf\hmc5883l\libhmc5883l.a
+[14/27] Linking C static library esp-idf\ms5611\libms5611.a
+[15/27] Linking C static library esp-idf\mpu6050\libmpu6050.a
+[16/27] Linking C static library esp-idf\deck\libdeck.a
+[17/27] Linking C static library esp-idf\i2c_bus\libi2c_bus.a
+[18/27] Linking C static library esp-idf\platform\libplatform.a
+[19/27] Linking C static library esp-idf\motors\libmotors.a
+[20/27] Linking C static library esp-idf\buzzer\libbuzzer.a
+[21/27] Linking C static library esp-idf\main\libmain.a
+[22/27] Generating ld/sections.ld
+[23/27] Building C object CMakeFiles/ESPDrone.elf.dir/project_elf_src_esp32s3.c.obj
+[24/27] Linking CXX executable ESPDrone.elf
+c:/espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/../lib/gcc/xtensa-esp32s3-elf/11.2.0/../../../../xtensa-esp32s3-elf/bin/ld.exe: missing --end-group; added as last command line option
+[25/27] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated C:/Users/efree/Downloads/Co-Create_ESP-FLY-main_Initial/Co-Create_ESP-FLY-main/Firmware/esp-drone/build/ESPDrone.bin
+[26/27] cmd.exe /C "cd /D C:\Users\efree\Downloads\Co-Create_ESP-FLY-main_Initial\Co-Create_ESP-FLY-main\Firmware\esp-drone\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.0_py3.14_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.0.7/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/efree/Downloads/Co-Create_ESP-FLY-main_Initial/Co-Create_ESP-FLY-main/Firmware/esp-drone/build/partition_table/partition-table.bin C:/Users/efree/Downloads/Co-Create_ESP-FLY-main_Initial/Co-Create_ESP-FLY-main/Firmware/esp-drone/build/ESPDrone.bin"
+ESPDrone.bin binary size 0xd2db0 bytes. Smallest app partition is 0x100000 bytes. 0x2d250 bytes (18%) free.
+[26/27] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.0.7\components\esptool_py && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.0.7 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.0_py3.14_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.0.7/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/efree/Downloads/Co-Create_ESP-FLY-main_Initial/Co-Create_ESP-FLY-main/Firmware/esp-drone/build -P C:/Espressif/frameworks/esp-idf-v5.0.7/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32s3 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 ESPDrone.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM3
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 90:70:69:10:ab:78
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000e2fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 21936 bytes to 13861...
+Writing at 0x00000000... (100 %)
+Wrote 21936 bytes (13861 compressed) at 0x00000000 in 0.3 seconds (effective 517.7 kbit/s)...
+Hash of data verified.
+Compressed 863664 bytes to 568919...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001be68... (5 %)
+Writing at 0x00025225... (8 %)
+Writing at 0x00029fd6... (11 %)
+Writing at 0x00033a0d... (14 %)
+Writing at 0x0003e2fe... (17 %)
+Writing at 0x00044082... (20 %)
+Writing at 0x000498ed... (22 %)
+Writing at 0x0004f119... (25 %)
+Writing at 0x0005454a... (28 %)
+Writing at 0x00059c73... (31 %)
+Writing at 0x0005f9bf... (34 %)
+Writing at 0x0006558c... (37 %)
+Writing at 0x0006a98f... (40 %)
+Writing at 0x0006fe89... (42 %)
+Writing at 0x000751d0... (45 %)
+Writing at 0x0007a805... (48 %)
+Writing at 0x0007f70d... (51 %)
+Writing at 0x000847bb... (54 %)
+Writing at 0x00089866... (57 %)
+Writing at 0x0008ecf8... (60 %)
+Writing at 0x000940b0... (62 %)
+Writing at 0x00099ce1... (65 %)
+Writing at 0x0009eccf... (68 %)
+Writing at 0x000a3ccd... (71 %)
+Writing at 0x000a8ca6... (74 %)
+Writing at 0x000ade87... (77 %)
+Writing at 0x000b3049... (80 %)
+Writing at 0x000b868f... (82 %)
+Writing at 0x000bdac4... (85 %)
+Writing at 0x000c66e3... (88 %)
+Writing at 0x000ce82f... (91 %)
+Writing at 0x000d3d42... (94 %)
+Writing at 0x000d95be... (97 %)
+Writing at 0x000ded03... (100 %)
+Wrote 863664 bytes (568919 compressed) at 0x00010000 in 6.1 seconds (effective 1134.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 555.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
