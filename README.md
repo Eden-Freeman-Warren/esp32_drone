@@ -773,46 +773,6 @@ The position should be sent continuously while the estimator and flight controll
 
 ---
 
-## Capturing the HOME Position
-
-Before flight, keep the drone still and record its starting position.
-
-Example:
-
-```python
-home_x = x
-home_y = y
-home_z = z
-```
-
-Subtract HOME from each new measurement:
-
-```python
-x_local = x - home_x
-y_local = y - home_y
-z_local = z - home_z
-```
-
-This makes the starting position approximately:
-
-```text
-X = 0
-Y = 0
-Z = 0
-```
-
-The local position is then sent to the drone:
-
-```python
-cf.extpos.send_extpos(
-    x_local,
-    y_local,
-    z_local,
-)
-```
-
----
-
 ## Confirming That External Position Works
 
 Before attempting flight:
